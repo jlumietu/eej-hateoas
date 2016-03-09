@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.eej.utilities</groupId>
+  <artifactId>eej-hateoas</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+  	<java-version>1.6</java-version>
+	<org.springframework-version>4.2.5.RELEASE</org.springframework-version>
+  	<com.fasterxml.jackson.core-version>2.4.3</com.fasterxml.jackson.core-version>
+  </properties> 
+ 
+  <dependencies>
+  	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.15</version>
+		<exclusions>
+			<exclusion>
+				<groupId>javax.mail</groupId>
+				<artifactId>mail</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>javax.jms</groupId>
+				<artifactId>jms</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>com.sun.jdmk</groupId>
+				<artifactId>jmxtools</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>com.sun.jmx</groupId>
+				<artifactId>jmxri</artifactId>
+			</exclusion>
+		</exclusions>
+		<scope>compile</scope>
+	</dependency>
+  	<dependency>	
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>${org.springframework-version}</version>
+		<exclusions>
+			<!-- Exclude Commons Logging in favor of SLF4j -->
+			<exclusion>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+			</exclusion>
+		</exclusions>
+	</dependency>
+	<dependency>
+        <groupId>org.springframework.hateoas</groupId>
+        <artifactId>spring-hateoas</artifactId>
+        <version>0.19.0.RELEASE</version>
+    </dependency>
+    	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-databind</artifactId>
+		<version>${com.fasterxml.jackson.core-version}</version>
+	</dependency>
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>${com.fasterxml.jackson.core-version}</version>
+    </dependency>  
+  </dependencies>
+</project>
